@@ -1,8 +1,8 @@
-# 🎵 Spotify Clone
-
+#  Spotify Clone
+Una aplicación desarrollada en Flutter que utiliza Firebase como backend e implementa la Clean Architecture para garantizar modularidad, escalabilidad y mantenibilidad. Este proyecto simula las principales funcionalidades de Spotify y es ideal para aprender a construir aplicaciones complejas y bien estructuradas.
 ---
 
-## 🚀 Características
+## Características
 
 - **Autenticación:**
   - Registro e inicio de sesión de usuarios con Firebase.
@@ -31,15 +31,19 @@
 
 ```plaintext
 lib/
-├── common/                # Componentes comunes reutilizables
-├── core/                  # Configuraciones globales (temas, rutas, etc.)
-├── data/                  # Fuentes de datos y repositorios
-├── domain/                # Casos de uso y contratos de repositorios
-├── presentation/          # UI y lógica de presentación (Bloc)
-│   ├── firebase_options.dart  # Configuración de Firebase
-│   ├── main.dart              # Punto de entrada de la aplicación
-│   └── service_locator.dart   # Configuración de inyección de dependencias
-```
+├── core/
+│   ├── errors/               # Manejo de excepciones
+│   ├── usecases/             # Casos de uso genéricos
+│   └── utils/                # Utilidades (helpers, constantes)
+├── features/
+│   ├── auth/                 # Módulo de autenticación
+│   │   ├── data/             # Fuentes de datos de Firebase
+│   │   ├── domain/           # Entidades y casos de uso
+│   │   └── presentation/     # Widgets y lógica de UI
+│   └── other_feature/        # Otros módulos organizados de forma similar
+├── injection_container.dart  # Inyección de dependencias
+└── main.dart                 # Punto de entrada
+
 
 ---
 
@@ -65,77 +69,6 @@ Ejecuta los siguientes comandos para instalar las dependencias necesarias:
 flutter pub get
 ```
 
-### 4. **Inicializar Firebase**
-
-El archivo `firebase_options.dart` ya está configurado automáticamente con la CLI de Firebase. Solo asegúrate de que Firebase se inicializa en el método `main`:
-```dart
-await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
-```
-
----
-
-## 🛠️ Dependencias principales
-
-Estas son las dependencias clave utilizadas en este proyecto:
-
-- **Flutter Bloc**: Manejo de estados reactivos.
-- **Hydrated Bloc**: Persistencia de estados local.
-- **GetIt**: Inyección de dependencias.
-- **Firebase Core & Auth**: Autenticación y servicios backend.
-- **Path Provider**: Acceso al sistema de archivos del dispositivo.
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_bloc: ^8.1.2
-  hydrated_bloc: ^9.1.0
-  firebase_core: ^2.11.0
-  firebase_auth: ^4.5.0
-  path_provider: ^2.0.11
-  get_it: ^7.6.0
-```
-
----
-
-## 🌟 Arquitectura
-
-El proyecto sigue el patrón de **Clean Architecture**, dividiendo la lógica en capas:
-
-### **1. Data Layer:**
-- Fuentes de datos y servicios (Firebase, API externas).
-- Implementaciones de repositorios.
-
-### **2. Domain Layer:**
-- Casos de uso (lógica de negocio independiente de la UI).
-- Contratos de repositorios (interfaces).
-
-### **3. Presentation Layer:**
-- Widgets y pantallas.
-- Gestión de estados con Bloc.
-
----
-
-## 💡 Uso del Service Locator
-
-El archivo `service_locator.dart` centraliza la configuración de dependencias. Ejemplo de registro de un repositorio y un caso de uso:
-
-```dart
-sl.registerSingleton<AuthRepository>(
-  AuthRepositoryImpl(),
-);
-
-sl.registerSingleton<SignupUseCase>(
-  SignupUseCase(),
-);
-```
-
-Llama a `initializeDependencies()` en el método `main` para configurar todo antes de iniciar la aplicación.
-
----
-
 ## 🌈 Temas y diseño
 
 El proyecto incluye un sistema de temas claros y oscuros configurados en `core/configs/theme/app_theme.dart`. Puedes alternar entre ellos usando `ThemeCubit` con Bloc.
@@ -153,7 +86,7 @@ child: BlocBuilder<ThemeCubit, ThemeMode>(
 
 ---
 
-## 🖥️ Ejecución
+##  Ejecución
 
 Ejecuta el proyecto en tu emulador o dispositivo físico:
 ```bash
@@ -167,11 +100,11 @@ flutter build apk
 
 ---
 
-## 🤝 Contribuciones
+##  Contribuciones
 
 ¡Las contribuciones son bienvenidas! Si tienes ideas o encuentras algún problema, abre un issue o envía un pull request.
 
 ---
 
 ## 📜 Autor
-  ¡
+  Walner Comprès Holguìn 2021-0252
