@@ -1,7 +1,5 @@
 # 🎵 Spotify Clone
 
-Una aplicación Flutter que implementa funcionalidades básicas inspiradas en Spotify, incluyendo soporte para autenticación, gestión de canciones favoritas, listas de reproducción, temas oscuros y claros, y más. La aplicación utiliza **Firebase** para la autenticación y almacenamiento, junto con patrones de arquitectura como **Clean Architecture** y manejo de estados con **Bloc**.
-
 ---
 
 ## 🚀 Características
@@ -176,9 +174,4 @@ flutter build apk
 ---
 
 ## 📜 Autor
-  Jose Francisco
-  
-## Original Project
-- Repo Autor: https://github.com/mahdinazmi/Spotify-Clone-With-Flutter
-
-- YouTube Channel Autor: https://www.youtube.com/watch?v=4TFbXepOjLI
+  ¡
