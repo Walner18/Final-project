@@ -25,28 +25,6 @@ Una aplicación desarrollada en Flutter que utiliza Firebase como backend e impl
   - Separación en capas: `data`, `domain`, y `presentation`.
   - Inyección de dependencias con **GetIt**.
 
----
-
-## Estructura del proyecto
-
-```plaintext
-lib/
-├── core/
-│   ├── errors/               # Manejo de excepciones
-│   ├── usecases/             # Casos de uso genéricos
-│   └── utils/                # Utilidades (helpers, constantes)
-├── features/
-│   ├── auth/                 # Módulo de autenticación
-│   │   ├── data/             # Fuentes de datos de Firebase
-│   │   ├── domain/           # Entidades y casos de uso
-│   │   └── presentation/     # Widgets y lógica de UI
-│   └── other_feature/        # Otros módulos organizados de forma similar
-├── injection_container.dart  # Inyección de dependencias
-└── main.dart                 # Punto de entrada
-
-
----
-
 ## Requisitos
 Para ejecutar la aplicación en tu entorno local, asegúrate de tener lo siguiente:
 
