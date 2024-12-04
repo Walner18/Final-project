@@ -39,11 +39,14 @@ Un emulador o dispositivo físico para ejecutar la aplicación.
 ¡Las contribuciones son bienvenidas! Si tienes ideas o encuentras algún problema, abre un issue o envía un pull request.
 ---
 
-# Instalación
+# Instalación.
 1- Clona este repositorio en tu máquina local:git clone https://github.com/Walner18/Final-project/edit/main/README.md 
+
 2- Navega a la carpeta del proyecto.
+
 3- Instala las dependencias del proyecto: flutter pub get
+
 4. Ejecuta la aplicación: flutter run
 
-#  Autor
+#  Autor.
    Walner Comprès Holguìn 2021-0252
