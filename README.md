@@ -3,7 +3,7 @@
 # Spotify Clone.
 
 Una aplicación desarrollada en Flutter que utiliza Firebase como backend e implementa la Clean Architecture para garantizar modularidad, escalabilidad y mantenibilidad. Este proyecto simula las principales funcionalidades de Spotify y es ideal para aprender a construir aplicaciones complejas y bien estructuradas.
----
+
 
 # Características.
 
@@ -37,7 +37,7 @@ Un emulador o dispositivo físico para ejecutar la aplicación.
 
 # Contribuciones.
 ¡Las contribuciones son bienvenidas! Si tienes ideas o encuentras algún problema, abre un issue o envía un pull request.
----
+
 
 # Instalación.
 1- Clona este repositorio en tu máquina local:git clone https://github.com/Walner18/Final-project/edit/main/README.md 
@@ -50,3 +50,4 @@ Un emulador o dispositivo físico para ejecutar la aplicación.
 
 #  Autor.
    Walner Comprès Holguìn 2021-0252
+---
